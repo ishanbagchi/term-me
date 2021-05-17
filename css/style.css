@@ -48,17 +48,11 @@ p {
 	margin: 20px 0;
 }
 
-nav {
-	width: 40%;
+.sections {
+	margin-bottom: 20px;
 }
 
-nav ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-nav ul li {
+.sections ul li {
 	color: var(--text-color);
 	cursor: pointer;
 }

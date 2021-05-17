@@ -8,10 +8,10 @@ about.addEventListener('click', () => {
         title: 'About Me',
         width: '400px',
         height: '400px',
-        // top: 50,
-        // right: 0,
-        // bottom: 0,
-        // left: 50,
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 50,
         mount: aboutContent.cloneNode(true),
         onfocus: function() {
             this.setBackground('#00aa00')
@@ -27,10 +27,10 @@ contact.addEventListener('click', () => {
         title: 'Contact Me',
         width: '400px',
         height: '400px',
-        // top: 100,
-        // right: 0,
-        // bottom: 0,
-        // left: 100,
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 50,
         mount: contactContent.cloneNode(true),
         onfocus: function() {
             this.setBackground('#00aa00')
