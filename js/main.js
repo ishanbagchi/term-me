@@ -95,7 +95,7 @@ project.addEventListener('click', () => {
 		const projectBox = new WinBox({
 			title: 'My Projects',
 			width: '300px',
-			height: '600px',
+			height: '550px',
 			border: '0.1em',
 			top: 50,
 			right: 50,
