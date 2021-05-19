@@ -70,11 +70,17 @@ p {
 	color: #ccc;
 }
 
-.sections {
-	margin-bottom: 20px;
+.sections,
+.social-links {
+	margin-bottom: 2.5rem;
 }
 
 .sections ul li {
+	color: var(--text-color);
+	cursor: pointer;
+}
+
+.playground li {
 	color: var(--text-color);
 	cursor: pointer;
 }
