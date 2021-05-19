@@ -76,7 +76,7 @@ document
 var registry = new Map()
 
 function register_cmd(cmd_name, func) {
-	registry.set(cmd_name.toString().toUpperCase(), func)
+	registry.set(cmd_name.toString().toLowerCase(), func)
 }
 
 function submit_command() {
@@ -88,21 +88,29 @@ function submit_command() {
 	new_block()
 	block_log(terminal_user_title + ' > ' + command)
 
-	if (registry.has(command.split(' ')[0].toUpperCase())) {
-		registry.get(command.split(' ')[0].toUpperCase())(command)
+	if (registry.has(command.split(' ')[0].toLowerCase())) {
+		registry.get(command.split(' ')[0].toLowerCase())(command)
 	} else {
 		block_log(
 			"'" +
-				command.split(' ')[0].toUpperCase() +
+				command.split(' ')[0].toLowerCase() +
 				"' is not a registered command, please refer to documentation for proper usage.",
 		)
 	}
 }
 
-register_cmd('list', function (cmd) {
+register_cmd('help', function (cmd) {
 	block_log('Registry Command List: ')
 	registry.forEach(function (value, key, map) {
-		block_log('    - ' + key)
+		if (key == 'help') {
+			block_log('    - ' + key)
+		} else if (key == 'update') {
+			block_log('    - ' + key + ' title [new title]')
+		} else if (key == 'myself') {
+			block_log('    - ' + key + ' [your_name]')
+		} else {
+			block_log('    - ' + key + ' [value_1] [value_2] ... [value_n]')
+		}
 	})
 })
 

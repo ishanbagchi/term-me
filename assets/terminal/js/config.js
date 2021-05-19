@@ -1,12 +1,14 @@
-log('Welcome to the terminal playground!')
+log('Welcome to the terminal playground! Start with <b>help</b>!')
 
 // Command - Hey
 
-register_cmd('hey', function (cmd) {
+register_cmd('myself', function (cmd) {
 	var parameters = cmd.split(' ').slice(1)
+	var name = ''
 	for (var i = 0; i < parameters.length; i++) {
-		block_log('Hello ' + parameters[i])
+		name += ' ' + parameters[i]
 	}
+	block_log('Hello' + name + '! Nice to meet you!')
 })
 
 // Command - Sum
